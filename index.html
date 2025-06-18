@@ -1,20 +1,20 @@
 <div id="container"></div>
 <script>
-    window.RufflePlayer = window.RufflePlayer || {};
+	window.RufflePlayer = window.RufflePlayer || {};
 
-    window.RufflePlayer.config = {
-	autoplay: "on",
-	unmuteOverlay: "hidden",
-	splashScreen: false
-};
+	window.RufflePlayer.config = {
+		autoplay: "on",
+		unmuteOverlay: "hidden",
+		splashScreen: false
+	};
 
-    window.addEventListener("DOMContentLoaded", () => {
-        let ruffle = window.RufflePlayer.newest();
-        let player = ruffle.createPlayer();
-        let container = document.getElementById("container");
-        container.appendChild(player);
-        player.ruffle().load("dog.swf");
-    });
+	window.addEventListener("DOMContentLoaded", () => {
+		let ruffle = window.RufflePlayer.newest();
+	        let player = ruffle.createPlayer();
+	        let container = document.getElementById("container");
+	        container.appendChild(player);
+	        player.ruffle().load("dog.swf");
+	});
 </script>
 <script src="ruffle.js"></script>
 <embed src="dog.swf" width="250" height="300" quality="high" bgcolor="ffffff" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="cn=Dog&amp;an=Owner&amp;clr=0xE2BB6E" type="application/x-shockwave-flash"></embed>
