@@ -17,12 +17,20 @@
             plugins: {
                 flashls: {
                     url: 'flashlsFlowPlayer.swf' // Flashls plugin SWF
-                }
+                },
+				plugins: {
+					httpstreaming: {
+						url: 'flashlsFlowPlayer.swf'
+					}
+				}
             },
             clip: {
                 url: "https://rtvelivestream.rtve.es/rne_r1_main.m3u8", // HLS audio URL
-                autoPlay: false // Set to true if you want it to autoplay
-            },
+				ipadUrl: "https://rtvelivestream.rtve.es/rne_r1_main.m3u8",
+                autoPlay: false,
+ 				urlResolvers: ["httpstreaming","brselect"],
+				provider: "httpstreaming",
+			},
             providers: {
                 httpstreaming: {
                     url: 'flashlsFlowPlayer.swf', // Ensure the Flashls plugin is properly linked
