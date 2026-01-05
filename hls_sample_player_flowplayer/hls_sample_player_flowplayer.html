@@ -12,20 +12,26 @@
 </a>
 
 <!-- Flowplayer installation and configuration -->
-<script type="text/javascript">
-flowplayer("flashls_vod", "flowplayer.swf", {
-	// configure the required plugins
-	plugins: {
-		flashls: {
-			url: 'flashlsFlowPlayer.swf',
-		}
-	},
-	clip: {
-		url: "https://rtvelivestream.rtve.es/rne_r1_main.m3u8",
-		autoPlay: false
-	}
-}).ipad();
-</script>
+    <script>
+        flowplayer("flashlsPlayer", "flowplayer.swf", {
+            plugins: {
+                flashls: {
+                    url: 'flashlsFlowPlayer.swf' // Flashls plugin SWF
+                }
+            },
+            clip: {
+                url: "https://rtvelivestream.rtve.es/rne_r1_main.m3u8", // HLS audio URL
+                autoPlay: false // Set to true if you want it to autoplay
+            },
+            providers: {
+                httpstreaming: {
+                    url: 'flashlsFlowPlayer.swf', // Ensure the Flashls plugin is properly linked
+                    autoPlay: false
+                }
+            }
+        }).ipad(); // Enable iPad support if necessary
+    </script>
+	
 <p>
 
 </p>
