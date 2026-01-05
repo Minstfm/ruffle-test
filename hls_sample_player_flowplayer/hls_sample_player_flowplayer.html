@@ -17,19 +17,12 @@
             plugins: {
                 flashls: {
                     url: 'flashlsFlowPlayer.swf' // Flashls plugin SWF
-                },
-				plugins: {
-					httpstreaming: {
-						url: 'flashlsFlowPlayer.swf'
-					}
-				}
+                }
             },
             clip: {
                 url: "https://rtvelivestream.rtve.es/rne_r1_main.m3u8", // HLS audio URL
 				ipadUrl: "https://rtvelivestream.rtve.es/rne_r1_main.m3u8",
                 autoPlay: false,
- 				urlResolvers: ["httpstreaming","brselect"],
-				provider: "httpstreaming",
 			},
             providers: {
                 httpstreaming: {
