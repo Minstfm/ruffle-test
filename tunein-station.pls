@@ -1,6 +1,6 @@
 [playlist]
-File1=https://27903.live.streamtheworld.com/LOS40_COSTA_SOLAAC.aac
-Title1=(#1 - 126/1000) LOS40
-Length1=-1
 numberofentries=1
+File1=http://116.202.241.212:7015/stream
+Title1=(#1 - 1/1000) VCR Auditorium Hi-Fi | Venice Classic Radio Italia
+Length1=-1
 Version=2
