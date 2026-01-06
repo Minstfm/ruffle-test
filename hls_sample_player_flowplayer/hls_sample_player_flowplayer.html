@@ -8,31 +8,25 @@
 
 <body>
 <!-- player container-->
-<a style="display: block; width: 660px; height: 350px;" id="flashlsPlayer">
+<a style="display: block; width: 660px; height: 350px;" id="flashls_vod">
 </a>
 
 <!-- Flowplayer installation and configuration -->
-    <script>
-        flowplayer("flashlsPlayer", "flowplayer.swf", {
-            plugins: {
-                flashls: {
-                    url: 'flashlsFlowPlayer.swf' // Flashls plugin SWF
-                }
-            },
-            clip: {
-                url: "https://stream-akamai.castr.com/5b9352dbda7b8c769937e459/live_2361c920455111ea85db6911fe397b9e/index.fmp4.m3u8", // HLS audio URL
-				ipadUrl: "https://stream-akamai.castr.com/5b9352dbda7b8c769937e459/live_2361c920455111ea85db6911fe397b9e/index.fmp4.m3u8",
-                autoPlay: false,
-			},
-            providers: {
-                httpstreaming: {
-                    url: 'flashlsFlowPlayer.swf', // Ensure the Flashls plugin is properly linked
-                    autoPlay: false
-                }
-            }
-        }).ipad(); // Enable iPad support if necessary
-    </script>
-	
+<script type="text/javascript">
+flowplayer("flashls_vod", "flowplayer.swf", {
+	// configure the required plugins
+	plugins: {
+		flashls: {
+			url: 'flashlsFlowPlayer.swf',
+		}
+	},
+	clip: {
+		url: "https://stream-akamai.castr.com/5b9352dbda7b8c769937e459/live_2361c920455111ea85db6911fe397b9e/index.fmp4.m3u8",
+		urlResolvers: "flashls",
+		provider: "flashls"
+	}
+}).ipad();
+</script>
 <p>
 
 </p>
