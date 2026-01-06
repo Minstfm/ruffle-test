@@ -1,6 +1,6 @@
 [playlist]
-numberofentries=1
 File1=http://116.202.241.212:8010/stream
-Title1=(#1 - 899/5000) VCR Auditorium | Venice Classic Radio Italia
+Title1=http://116.202.241.212:8010/currentsong
 Length1=-1
+numberofentries=1
 Version=2
